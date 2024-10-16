@@ -14,7 +14,7 @@ This document explains the SOLID principles and their application in Angular pro
 
 **Beore SRP**:
 
-```typescript
+```
 export class UserProfileComponent {
   user: User;
 
@@ -24,8 +24,7 @@ export class UserProfileComponent {
 }
 After SRP:
 
-typescript
-Copy code
+
 export class UserProfileComponent {
   user: User;
 
@@ -51,8 +50,7 @@ In Angular: Use dependency injection and extend services to add new behaviors in
 
 Example:
 
-typescript
-Copy code
+
 export class PaymentService {
   pay(amount: number) {
     // logic for card payment
@@ -82,8 +80,7 @@ In Angular: When using inheritance, make sure that derived classes can replace b
 
 Example:
 
-typescript
-Copy code
+
 export class Animal {
   makeSound() { return 'Some sound'; }
 }
@@ -106,8 +103,6 @@ In Angular: Use smaller, more specific interfaces that ensure components/service
 
 Example:
 
-typescript
-Copy code
 interface Animal {
   eat(): void;
 }
@@ -134,8 +129,6 @@ In Angular: Use dependency injection to invert dependencies, ensuring components
 
 Example:
 
-typescript
-Copy code
 export interface PaymentMethod {
   pay(amount: number): void;
 }
